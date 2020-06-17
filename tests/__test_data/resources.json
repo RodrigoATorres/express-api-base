@@ -1,0 +1,10 @@
+[
+    {
+        "_id": {
+            "$oid": "5ea76e5af1e4d9552677655e"
+        },
+        "route": "/permissionsmanager/roles",
+        "description": "Rota de testes",
+        "__v": 0
+    }
+]
