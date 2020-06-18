@@ -10,7 +10,7 @@ prepare((done) => {
     for (let file of files) {
         test_data[path.parse(file).name] = JSON.parse(fs.readFileSync(file));
     }
-    fs.writeFileSync("./test/test_data.json", JSON.stringify(test_data));
+    fs.writeFileSync("./tests/test_data.json", JSON.stringify(test_data));
 
     mongoUnit.start().then((testMongoUrl) => {
         process.env.MONGO_URL = testMongoUrl;

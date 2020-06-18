@@ -15,7 +15,9 @@
   "license": "ISC",
   "nodemonConfig": {
     "ignore": [
-      "tests/test_data.json"
+      "tests/test_data.json",
+      "tests/__test_data/*.json",
+      "tests/__test_data/backup/*.json"
     ]
   },
   "config": {
@@ -34,6 +36,7 @@
     ]
   },
   "devDependencies": {
+    "bson": "^4.0.4",
     "husky": "^4.2.5",
     "json2mongo": "^2.0.0",
     "lint-staged": "^10.2.10",

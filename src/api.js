@@ -11,6 +11,8 @@ const mongoose = require("mongoose");
 const authRoutes = require("./routes/auth");
 const permissionManagerRoutes = require("./routes/permissionsManager");
 const workGroupManagerRoutes = require('./routes/workGroupsManager');
+const financeManagerRoutes = require('./routes/financesManager');
+const developmentRoutes = require('./routes/development')
 // const userRoutes = require("./routes/users");
 
 const saveWorkGroup = require("./middlewares/saveWorkGroup")
@@ -26,19 +28,22 @@ startExpress = (cfg) => {
     app.use(securityMiddleware);
 
     app.use("/auth", authRoutes);
-    app.use("/:workGroupId/permissionsmanager", saveWorkGroup, permissionManagerRoutes);
     app.use("/permissionsmanager", saveWorkGroup, permissionManagerRoutes);
+    app.use("/financesmanager", saveWorkGroup, financeManagerRoutes);
     app.use("/workgroups", workGroupManagerRoutes);
+    app.use("/development", developmentRoutes);
     // app.use("/users", userRoutes);
 
     app.use(exceptionHandler);
 
-        mongoose
-            .connect(cfg.dbUrl, { ssl: cfg.dbSSL })
-            .then((result) => {
-                app.listen(cfg.listenPort||5000, cfg.listenAddress||"localhost");
-            })
-            .catch((err) => console.log(err));
+    console.log(cfg.dbUrl);
+    
+    mongoose
+        .connect(cfg.dbUrl, { ssl: cfg.dbSSL })
+        .then((result) => {
+            app.listen(cfg.listenPort||5000, cfg.listenAddress||"localhost");
+        })
+        .catch((err) => console.log(err));
 };
 
 
