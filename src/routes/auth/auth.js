@@ -7,7 +7,7 @@ const isAuth = require("../../middlewares/is-auth");
 
 const router = express.Router();
 
-router.put(
+router.post(
     "/signup",
     [
         body("email")
