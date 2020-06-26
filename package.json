@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "env NODE_ENV=test mocha --timeout 10000",
-    "start": "nodemon src/index.js",
+    "start": "env NODE_ENV=development nodemon src/index.js",
     "pretty": "prettier --check \"src/**/*.js\" --write"
   },
   "author": "",

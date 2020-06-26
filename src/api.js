@@ -43,9 +43,9 @@ startExpress = (cfg) => {
     app.use(exceptionHandler);
 
     console.log(cfg.dbUrl);
-    
+
     mongoose
-        .connect(cfg.dbUrl, { ssl: cfg.dbSSL })
+        .connect(cfg.dbUrl, { ssl: cfg.dbSSL,  useNewUrlParser: true, useUnifiedTopology: true })
         .then((result) => {
             app.listen(cfg.listenPort||5000, cfg.listenAddress||"localhost");
         })
