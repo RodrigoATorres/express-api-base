@@ -1,1 +1,22 @@
-[{"_id":{"$oid":"5ea76e5af1e4d9502677675f"},"email":"ratorres7@gmail.com","password":"$2a$12$cVYFoQlmpvZt4z0BLV2JMuyuIlA616NIZDDB/VLNH6W7q3YvymTYS","name":"Rodrigo Amorim Torres","isAdmin":true,"__v":0},{"_id":{"$oid":"5ea7809c08811916fc988fd3"},"email":"marcelolobaovet@gmail.com","password":"$2a$12$cVYFoQlmpvZt4z0BLV2JMuyuIlA616NIZDDB/VLNH6W7q3YvymTYS","name":"Marcelo Lobão Torres","isAdmin":true,"__v":0}]
+[
+    {
+        "_id": {
+            "$oid": "5ea76e5af1e4d9502677675f"
+        },
+        "email": "ratorres7@gmail.com",
+        "password": "$2a$12$cVYFoQlmpvZt4z0BLV2JMuyuIlA616NIZDDB/VLNH6W7q3YvymTYS",
+        "name": "Rodrigo Amorim Torres",
+        "isAdmin": true,
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "5ea7809c08811916fc988fd3"
+        },
+        "email": "marcelolobaovet@gmail.com",
+        "password": "$2a$12$cVYFoQlmpvZt4z0BLV2JMuyuIlA616NIZDDB/VLNH6W7q3YvymTYS",
+        "name": "Marcelo Lobão Torres",
+        "isAdmin": true,
+        "__v": 0
+    }
+]

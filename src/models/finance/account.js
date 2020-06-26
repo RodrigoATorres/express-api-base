@@ -12,6 +12,11 @@ const accountSchema = new Schema({
         type:String,
         default:''
     },
+    type:{
+        type:Schema.Types.ObjectId,
+        ref:'AccountType',
+        required: true,
+    },
     workGroup: {
         type: Schema.Types.ObjectId,
         ref: 'WorkGroup',

@@ -1,0 +1,26 @@
+[
+    {
+        "_id": {
+            "$oid": "5ef4b29147eb554700660c41"
+        },
+        "description": "Contas de conta corrente",
+        "name": "Conta Corrente",
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "5ef4b7340320db4bb233a225"
+        },
+        "description": "Tipo de conta a ser utilizado para qualquer conta externa à (fornecedores, etc)",
+        "name": "Conta Externa",
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "5ef4b7920320db4bb233a226"
+        },
+        "description": "Conta de cartão de crédito",
+        "name": "Cartões de Crédito",
+        "__v": 0
+    }
+]

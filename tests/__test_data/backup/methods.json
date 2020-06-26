@@ -1,1 +1,10 @@
-[{"_id":{"$oid":"5ea76e5af1e4d9502677655e"},"name":"GET","description":"Método utilizado para requerer dados","__v":0}]
+[
+    {
+        "_id": {
+            "$oid": "5ea76e5af1e4d9502677655e"
+        },
+        "name": "GET",
+        "description": "Método utilizado para requerer dados",
+        "__v": 0
+    }
+]

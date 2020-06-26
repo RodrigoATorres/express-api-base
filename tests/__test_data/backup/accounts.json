@@ -1,0 +1,30 @@
+[
+    {
+        "_id": {
+            "$oid": "5ef4b85f0320db4bb233a22c"
+        },
+        "description": "Conta corrente do Banco do Brasil",
+        "name": "Banco do Brasil CC",
+        "type": {
+            "$oid": "5ef4b29147eb554700660c41"
+        },
+        "workGroup": {
+            "$oid": "5ea88e5af1e4d9502677675f"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "5ef4b87f0320db4bb233a22d"
+        },
+        "description": "Cartão de crédito Nubank",
+        "name": "Nubank",
+        "type": {
+            "$oid": "5ef4b7920320db4bb233a226"
+        },
+        "workGroup": {
+            "$oid": "5ea88e5af1e4d9502677675f"
+        },
+        "__v": 0
+    }
+]

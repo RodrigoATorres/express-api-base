@@ -42,7 +42,8 @@
     "lint-staged": "^10.2.10",
     "mongo-unit": "^2.0.1",
     "nodemon": "^2.0.4",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "ps-node": "^0.1.6"
   },
   "dependencies": {
     "app-root-path": "^3.0.0",

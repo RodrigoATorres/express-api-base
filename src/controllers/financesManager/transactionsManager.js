@@ -21,16 +21,19 @@ const populate = [
 exports.createTransaction = controllerHelpers.genCreateFunc(
     Transaction,
     ["ammount","date", "accountIn","accountOut","budgetIn", "budgetOut", "type", "description"],
-    populate,
     addData
     );
 exports.getTransaction = controllerHelpers.genGetFunc(
     Transaction,
-    ["ammount","date", "accountIn","accountOut","budgetIn", "budgetOut", "type", "description"]
+    ["ammount","date", "accountIn","accountOut","budgetIn", "budgetOut", "type", "description"],
+    populate,
+    addFilter
     );
 exports.getTransactionList = controllerHelpers.genGetListFunc(
     Transaction,
-    ["ammount","date", "accountIn","accountOut","budgetIn", "budgetOut", "type", "description"]
+    ["ammount","date", "accountIn","accountOut","budgetIn", "budgetOut", "type", "description"],
+    populate,
+    addFilter
     );
 exports.deleteTransaction = controllerHelpers.genDeleteFunc(Transaction);
 exports.editTransaction = controllerHelpers.genEditFunc(Transaction);

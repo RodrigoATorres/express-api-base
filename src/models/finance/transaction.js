@@ -32,11 +32,6 @@ const transactionSchema = new Schema({
         ref:'Budget',
         required: true
     },
-    type:{
-        type:Schema.Types.ObjectId,
-        ref:'TransactionType',
-        required: true,
-    },
     description: {
         type: String,
         required: true,

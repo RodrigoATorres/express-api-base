@@ -1,0 +1,24 @@
+[
+    {
+        "_id": {
+            "$oid": "5ef4b80e0320db4bb233a228"
+        },
+        "description": "Orçamento utilizado para quando não houver um destino definido para contas de entrada, ou quando a saída não vai ser abatida de um orçamento específico",
+        "name": "Geral",
+        "workGroup": {
+            "$oid": "5ea88e5af1e4d9502677675f"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "5ef4b8230320db4bb233a229"
+        },
+        "description": "Orçamento utilizado para insumos e serviços de limpeza",
+        "name": "Limpeza",
+        "workGroup": {
+            "$oid": "5ea88e5af1e4d9502677675f"
+        },
+        "__v": 0
+    }
+]

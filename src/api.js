@@ -20,6 +20,9 @@ const securityMiddleware = require("./middlewares/securtiy");
 const loggerMiddleware = require("./middlewares/logger");
 const exceptionHandler = require("./middlewares/exceptionHandler");
 
+
+const roleRoutes = require('./routes/permissionsManager/roles')
+
 startExpress = (cfg) => {
 
     const app = express();
@@ -29,9 +32,12 @@ startExpress = (cfg) => {
 
     app.use("/auth", authRoutes);
     app.use("/permissionsmanager", saveWorkGroup, permissionManagerRoutes);
+    app.use("/roles", saveWorkGroup, roleRoutes);
     app.use("/financesmanager", saveWorkGroup, financeManagerRoutes);
     app.use("/workgroups", workGroupManagerRoutes);
-    app.use("/development", developmentRoutes);
+    if (cfg.env === 'development'){
+        app.use("/development", developmentRoutes);
+    }
     // app.use("/users", userRoutes);
 
     app.use(exceptionHandler);
@@ -48,6 +54,30 @@ startExpress = (cfg) => {
 
 
 startMemoryDb = async () => {
+    var ps = require('ps-node');
+
+    // A simple pid lookup
+    ps.lookup({
+        command: 'mongodb-memory-server',
+        }, function(err, resultList ) {
+        if (err) {
+            throw new Error( err );
+        }
+    
+        resultList.forEach(function( process ){
+            if( process ){
+                ps.kill( process.pid, function( err ) {
+                    if (err) {
+                        throw new Error( err );
+                    }
+                    else {
+                        console.log( 'Process %s has been killed!', process.pid, );
+                    }
+                });
+            }
+        });
+    });
+
     await new Promise(r => setTimeout(r, 1000));
     var test_data = {};
     files = glob.sync("./tests/__test_data/*.json");

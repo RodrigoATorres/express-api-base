@@ -1,1 +1,47 @@
-[{"_id":{"$oid":"5ea88e5af1e4d9502677675f"},"owner":{"$oid":"5ea76e5af1e4d9502677675f"},"description":"blalaldsf","name":"Grupo Teste","memberRoles":[{"user":{"$oid":"5ea76e5af1e4d9502677675f"},"roles":[{"$oid":"5ea76e5af1e4d9502677675e"}]}],"__v":0}]
+[
+    {
+        "_id": {
+            "$oid": "5ea88e5af1e4d9502677675f"
+        },
+        "owner": {
+            "$oid": "5ea76e5af1e4d9502677675f"
+        },
+        "description": "blalaldsf",
+        "name": "Grupo Teste",
+        "memberRoles": [
+            {
+                "user": {
+                    "$oid": "5ea76e5af1e4d9502677675f"
+                },
+                "roles": [
+                    {
+                        "$oid": "5ea76e5af1e4d9502677675e"
+                    }
+                ]
+            }
+        ],
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "5eebc213bcccf82203d43a32"
+        },
+        "name": "Grupo teste 2",
+        "description": "Testando mais uma vez",
+        "owner": {
+            "$oid": "5ea76e5af1e4d9502677675f"
+        },
+        "memberRoles": [
+            {
+                "roles": [],
+                "_id": {
+                    "$oid": "5eebc213bcccf82203d43a33"
+                },
+                "user": {
+                    "$oid": "5ea76e5af1e4d9502677675f"
+                }
+            }
+        ],
+        "__v": 0
+    }
+]

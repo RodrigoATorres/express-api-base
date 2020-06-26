@@ -1,0 +1,54 @@
+[
+    {
+        "_id": {
+            "$oid": "5ef4b8b60320db4bb233a234"
+        },
+        "description": "Pagamento de fatura",
+        "ammount": 50,
+        "date": {
+            "$date": "2020-06-25T00:00:00Z"
+        },
+        "accountIn": {
+            "$oid": "5ef4b85f0320db4bb233a22c"
+        },
+        "accountOut": {
+            "$oid": "5ef4b87f0320db4bb233a22d"
+        },
+        "budgetIn": {
+            "$oid": "5ef4b80e0320db4bb233a228"
+        },
+        "budgetOut": {
+            "$oid": "5ef4b80e0320db4bb233a228"
+        },
+        "workGroup": {
+            "$oid": "5ea88e5af1e4d9502677675f"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "5ef4b8b60320db4bb233a235"
+        },
+        "description": "Pagamento de fatura",
+        "ammount": 50,
+        "date": {
+            "$date": "2020-06-25T00:00:00Z"
+        },
+        "accountIn": {
+            "$oid": "5ef4b85f0320db4bb233a22c"
+        },
+        "accountOut": {
+            "$oid": "5ef4b87f0320db4bb233a22d"
+        },
+        "budgetIn": {
+            "$oid": "5ef4b80e0320db4bb233a228"
+        },
+        "budgetOut": {
+            "$oid": "5ef4b80e0320db4bb233a228"
+        },
+        "workGroup": {
+            "$oid": "5ea88e5af1e4d9502677675f"
+        },
+        "__v": 0
+    }
+]
