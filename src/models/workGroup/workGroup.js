@@ -26,7 +26,12 @@ const workGroupSchema = new Schema({
             type: ObjectId,
             ref: 'Role'
         }]        
-    }]
+    }],
+
+    themePalette:{
+        type: mongoose.Mixed
+    }
+
 });
 
 module.exports = mongoose.model("WorkGroup", workGroupSchema);

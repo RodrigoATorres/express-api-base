@@ -5,7 +5,8 @@
         },
         "description": "Contas de conta corrente",
         "name": "Conta Corrente",
-        "__v": 0
+        "__v": 0,
+        "isExternal": false
     },
     {
         "_id": {
@@ -13,7 +14,8 @@
         },
         "description": "Tipo de conta a ser utilizado para qualquer conta externa à (fornecedores, etc)",
         "name": "Conta Externa",
-        "__v": 0
+        "__v": 0,
+        "isExternal": true
     },
     {
         "_id": {
@@ -21,6 +23,7 @@
         },
         "description": "Conta de cartão de crédito",
         "name": "Cartões de Crédito",
-        "__v": 0
+        "__v": 0,
+        "isExternal": false
     }
 ]

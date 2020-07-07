@@ -5,6 +5,10 @@ const addFilter = (filter, req) => {
     filter.memberRoles = { $elemMatch: {user:req.user}};
 };
 
+const addFilterOwner = (filter, req) => {
+    filter.owner = req.user;
+};
+
 const addData = (data,req) => {
     data.owner = req.user;
     data.memberRoles = [
@@ -19,11 +23,17 @@ const addData = (data,req) => {
 exports.createWorkGroup = controllerHelpers.genCreateFunc(WorkGroup,["name", "owner", "description"], addData);
 exports.getWorkGroup = controllerHelpers.genGetFunc(
     WorkGroup,
-    ["name", "owner", "description"],
+    ["name", "owner", "description", "themePalette"],
     [
         { path: "owner", select: "name" },
     ],
     addFilter);
+
+exports.getWorkGroupTheme = controllerHelpers.genGetFunc(
+    WorkGroup,
+    ["themePalette"],
+    );
+
 exports.getWorkGroupList = controllerHelpers.genGetListFunc(
     WorkGroup,
     ["name", "owner", "description"],
@@ -31,5 +41,5 @@ exports.getWorkGroupList = controllerHelpers.genGetListFunc(
         { path: "owner", select: "name" },
     ],
     addFilter);
-exports.deleteWorkGroup = controllerHelpers.genDeleteFunc(WorkGroup, addFilter);
-exports.editWorkGroup = controllerHelpers.genEditFunc(WorkGroup, addFilter);
+exports.deleteWorkGroup = controllerHelpers.genDeleteFunc(WorkGroup, addFilterOwner);
+exports.editWorkGroup = controllerHelpers.genEditFunc(WorkGroup, addFilterOwner);
